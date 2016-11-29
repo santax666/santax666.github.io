@@ -1,0 +1,63 @@
+body {
+	padding-top: 105px;
+	background-image: url('../img/android.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+	font-size:0.9em;
+}
+
+blockquote p {
+		margin:0;
+}
+
+.bubble_quotes {
+		width: 240px;
+		position:relative;
+		padding:10px 25px; 
+		margin:0;
+		color:#000;
+		background:#f3961c; /* default background for browsers without gradient support */
+		/* css3 */
+		background:-webkit-gradient(linear, 0 0, 0 100%, from(#f9d835), to(#f3961c));
+		background:-moz-linear-gradient(#f9d835, #f3961c);
+		background:-o-linear-gradient(#f9d835, #f3961c);
+		background:linear-gradient(#f9d835, #f3961c);
+		/* Using longhand to avoid inconsistencies between Safari 4 and Chrome 4 */
+		-webkit-border-top-left-radius:25px 50px;
+		-webkit-border-top-right-radius:25px 50px;
+		-webkit-border-bottom-right-radius:25px 50px;
+		-webkit-border-bottom-left-radius:25px 50px;
+		-moz-border-radius:25px / 50px;
+		border-radius:25px / 50px;
+}
+
+/* display of quote author (alternatively use a class on the element following the blockquote) */
+.bubble_quotes + p {font-style:italic;}
+
+/* creates the larger triangle */
+.bubble_quotes:before {
+			content:"";
+			position:absolute;
+			bottom:-30px;
+			right:20px;
+			border-width:0 0 30px 50px;
+			border-style:solid;
+			border-color:transparent #f3961c;
+			/* reduce the damage in FF3.0 */
+			display:block;
+			width:0;
+}
+
+/* creates the smaller triangle */
+.bubble_quotes:after {
+			content:"";
+			position:absolute;
+			bottom:-30px;
+			right:50px;
+			border-width:0 0 30px 20px;
+			border-style:solid;
+			border-color:transparent #fff;
+			/* reduce the damage in FF3.0 */
+			display:block;
+			width:0;
+}
