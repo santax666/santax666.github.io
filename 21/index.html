@@ -1,240 +1,248 @@
 <!DOCTYPE html>
 <html lang="ru">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <head>
-    <title>Твой Дом</title>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet">
+  <script async="async" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init"></script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.js"></script>
-    <![endif]-->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/stylish-portfolio.css" rel="stylesheet">
 
+  <!-- Custom Fonts -->
+  <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet">
+
+
+  <meta charset="utf-8">
+  <title>Твой Дом</title>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-		<a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-                <button class="btn-link" onclick = "$('#menu-close').click(); window.location='#top'">Агентство</button>
-            </li>
-            <li>
-                <button class="btn-link" onclick = "$('#menu-close').click(); window.location='#top'">Главная</button>
-            </li>
-            <li>
-                <button class="btn-link" onclick = "$('#menu-close').click(); window.location='#about'">О нас</button>
-            </li>
-            <li>
-                <button class="btn-link" onclick = "$('#menu-close').click(); window.location='#services'">Услуги</button>
-            </li>
-            <!-- <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); >Портфолио</a>
-            </li> -->
-            <li>
-                <button class="btn-link" onclick = "$('#menu-close').click(); window.location='#contact'">Контакты</button>
-            </li>
-        </ul>
-    </nav>
+  <!-- Navigation -->
+  <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li>
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+      </li>
+      <li class="sidebar-brand">
+        <button class="btn-link" onclick = "$('#menu-close').click(); window.location='#top'">Агентство</button>
+      </li>
+      <li>
+        <button class="btn-link" onclick = "$('#menu-close').click(); window.location='#top'">Главная</button>
+      </li>
+      <li>
+        <button class="btn-link" onclick = "$('#menu-close').click(); window.location='#services'">О нас</button>
+      </li>
+      <li>
+        <button class="btn-link" onclick = "$('#menu-close').click(); window.location='#services'">Услуги</button>
+      </li>
+      <!-- <li>
+        <a href="#portfolio" onclick = $("#menu-close").click(); >Портфолио</a>
+      </li> -->
+      <li>
+        <button class="btn-link" onclick = "$('#menu-close').click(); window.location='#contact'">Контакты</button>
+      </li>
+    </ul>
+  </nav>
 
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <div style="margin: 0; padding: 0; font-size: 4.5em; font-weight: 700;">Твой Дом</div>
-            <div style="margin-top: 20;margin-bottom: 10;font-weight: 500; font-size: 24"><h1>Агентство недвижимости</h1></div>
-            <br>
-            <a href="#about" class="btn btn-dark btn-lg">Узнать больше >></a>
-        </div>
-    </header>
+  <!-- Header -->
+  <header id="top" class="header">
+    <div class="text-vertical-center">
+      <div style="margin: 0; padding: 0; font-size: 4.5em; font-weight: 700;">Твой Дом</div>
+      <div style="margin-top: 20px ;margin-bottom: 10px ;font-weight: 500; font-size: 24px">Агентство недвижимости</div>
+      <br>
+      <a href="#about" class="btn btn-dark btn-lg">Узнать больше >></a>
+    </div>
+  </header>
 
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Квартира вашей мечты!</h2>
-                    <p class="lead">Дом там, где сердце. Мы поможем вам и вашей компании найти место, где вы будете чувствовать себя дома.<br>Покупка или продажа — мы то, что вам нужно.</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Наши услуги</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-search fa-stack-1x text-primary"></i>
-                                </span>
-                                <h3>
-                                    <strong>Оценка</strong>
-                                </h3>
-                                <p>Оценка жилой недвижимости: квартир и домов в Москве</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-file fa-stack-1x text-primary"></i>
-                                </span>
-                                <h3>
-                                    <strong>Договора</strong>
-                                </h3>
-                                <p>Составление договоров, подготовка пакета документов к гос.регистрации, комфортное сопровождение сделок</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-phone fa-stack-1x text-primary"></i>
-                                </span>
-                                <h3>
-                                    <strong>Консультации</strong>
-                                </h3>
-                                <p>Всегда бесплатное консультирование по телефону +7 (999) 999-99-99
-                                 ведущим специалистом</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-usd fa-stack-1x text-primary"></i>
-                            </span>
-                                <h3>
-                                    <strong>Выкуп</strong>
-                                </h3>
-                                <p>Срочный выкуп недвижимости</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Map -->
-    <section id="contact">
-      <div id="map" class="map" style="width: 100%; height: 100%"></div>
-
-
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-lg-12">
-            <div style="font-size: 30; margin-top: 40; margin-bottom: 20;"><h2>Наш офис</h2></div>
-            <img src="img/office%20%26%20place.jpg" width="600" class="img-rounded center-block" alt="Наш офис">
-          </div>
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Квартира вашей мечты!</h2>
+          <p class="lead">Дом там, где сердце. Мы поможем вам и вашей компании найти место, где вы будете чувствовать себя дома.<br>Покупка или продажа — мы то, что вам нужно.</p>
         </div>
       </div>
-    </section>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
 
-    <script type="text/javascript">
-      ymaps.ready(init);
-      function init(){
-        var map = new ymaps.Map("map", {
-                center: [55.740684, 37.618174],
-                zoom: 15
-            });
-        map.behaviors.disable('scrollZoom');
-        placemark = new ymaps.Placemark([55.740684, 37.618174], {
-          hintContent: 'Твой Дом',
-          balloonContentHeader: 'Твой Дом',
-          balloonContentBody: 'Москва, Старомонетный переулок, 10'
-        });
-        map.geoObjects.add(placemark);
-      }
-    </script>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center" id="contact2">
-                    <h3><strong>Твой Дом</strong>
-                    </h3>
-                    <p>г. Москва<br>Старомонетный переулок, 10</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> +7 (999) 999-99-99</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">test@example.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="https://vk.com/"><i class="fa fa-vk fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="http://example.com/"><i class="fa fa-link fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                </div>
+  <!-- Services -->
+  <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+  <section id="services" class="services bg-primary">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-10 col-lg-offset-1">
+          <h2>Наши услуги</h2>
+          <hr class="small">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <div class="service-item">
+                <span class="fa-stack fa-4x">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-search fa-stack-1x text-primary"></i>
+                </span>
+                <h4>
+                  <strong>Оценка</strong>
+                </h4>
+                <p>Оценка жилой недвижимости: квартир и домов в Москве</p>
+              </div>
             </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="service-item">
+                <span class="fa-stack fa-4x">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-file fa-stack-1x text-primary"></i>
+                </span>
+                <h4>
+                  <strong>Договора</strong>
+                </h4>
+                <p>Составление договоров, подготовка пакета документов к гос.регистрации, комфортное сопровождение сделок</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="service-item">
+                <span class="fa-stack fa-4x">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-phone fa-stack-1x text-primary"></i>
+                </span>
+                <h4>
+                  <strong>Консультации</strong>
+                </h4>
+                <p>Всегда бесплатное консультирование по телефону +7 (999) 999-99-99
+                 ведущим специалистом</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="service-item">
+                <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-usd fa-stack-1x text-primary"></i>
+              </span>
+                <h4>
+                  <strong>Выкуп</strong>
+                </h4>
+                <p>Срочный выкуп недвижимости</p>
+              </div>
+            </div>
+          </div>
+          <!-- /.row (nested) -->
         </div>
-    </footer>
+        <!-- /.col-lg-10 -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+
+  <script>
+    ymaps.ready(init);
+    function init(){
+      var map = new ymaps.Map("map", {
+        center: [55.740684, 37.618174],
+        zoom: 15
+      });
+      map.behaviors.disable('scrollZoom');
+      placemark = new ymaps.Placemark([55.740684, 37.618174], {
+        hintContent: 'Твой Дом',
+        balloonContentHeader: 'Твой Дом',
+        balloonContentBody: 'Москва, Старомонетный переулок, 10'
+      });
+      map.geoObjects.add(placemark);
+    }
+  </script>
 
 
-    <!-- Custom Theme JavaScript -->
-    <script>
+  <!-- Map -->
+  <section id="contact">
+    <div id="map" class="map" style="width: 100%; height: 100%;"></div>
+
+    <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-12">
+      <div style="font-size: 30px; margin-top: 40px; margin-bottom: 20px;"><h2>Наш офис</h2></div>
+      <img src="img/office_place.jpg" width="600" class="img-rounded center-block" alt="">
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center" id="contacts">
+          <h4><strong>Твой Дом</strong>
+          </h4>
+          <p>г. Москва<br>Старомонетный переулок, 10</p>
+          <ul class="list-unstyled">
+            <li><i class="fa fa-phone fa-fw"></i> +7 (999) 999-99-99</li>
+            <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">test@example.com</a>
+            </li>
+          </ul>
+          <br>
+          <ul class="list-inline">
+            <li>
+              <a href="https://vk.com/"><i class="fa fa-vk fa-fw fa-3x"></i></a>
+            </li>
+            <li>
+              <a href="http://example.com/"><i class="fa fa-link fa-fw fa-3x"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+
+  <!-- Custom Theme JavaScript -->
+  <script>
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
+      e.preventDefault();
+      $("#sidebar-wrapper").toggleClass("active");
     });
 
     // Opens the sidebar menu
     $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
+      e.preventDefault();
+      $("#sidebar-wrapper").toggleClass("active");
     });
 
     // Scrolls to the selected menu item on the page
     $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
     });
-    </script>
+  </script>
 
 </body>
 
